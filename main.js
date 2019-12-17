@@ -24,7 +24,7 @@
     const text = inputText.value;
     inputText.value = '';
     return text;
-  }
+  };
 
   // `validateTodo関数` を実装する
   // - 実現したい機能
@@ -45,7 +45,7 @@
     });
 
     return todo;
-  }
+  };
 
   // `addTodo関数` を実装する
   // - 実現したい機能
@@ -55,8 +55,8 @@
   // - 戻り値
   //   - 無し
   const addTodo = (todo) => {
-      todos.push(todo);
-  }
+    todos.push(todo);
+  };
 
   // `showTodos関数` を実装する
   // - 実現したい機能
@@ -86,7 +86,7 @@
       });
       liListItem.appendChild(deleteButton);
     });
-  }
+  };
 
   // `deleteTodo関数` を実装する
   // - 実現したい機能
@@ -95,7 +95,7 @@
   //   - index : 配列から削除したい要素のインデックス番号
   const deleteTodo = (index) => {
     todos.splice(index, 1);
-  }
+  };
 
   // `promiseTaskOfAddingTodo関数を実装する`
   // - 実現したい機能
@@ -140,7 +140,7 @@
     const promise = Promise.resolve(index);
     promise
       .then(deleteTodo)
-      .then(showTodos)
+      .then(showTodos);
   }
 
   // 追加ボタンをクリックしたら `promiseTaskOfAddingTodo` を実行する
